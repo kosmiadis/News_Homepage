@@ -1,0 +1,90 @@
+header {
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div.desktop-menu {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+header div.desktop-menu a {
+  text-decoration: none;
+  color: black;
+  font-family: inherit;
+  font-weight: 500;
+  transition: transform 0.08s ease-in;
+}
+
+header div.desktop-menu a:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 869px) {
+  header div.desktop-menu {
+    display: flex;
+  }
+}
+
+header div.mobile-menu {
+  box-shadow: 0px 0px 20px lightgrey;
+  flex-direction: column;
+  align-items: left;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+header div.mobile-menu label.close-hamburger {
+  opacity: 0;
+  align-self: flex-end;
+  margin-right: 25px;
+  transition: all 0.5s ease-in;
+}
+
+header div.mobile-menu label.close-hamburger div.line {
+  top: 16px;
+}
+
+header div.mobile-menu label.close-hamburger div.line:nth-of-type(1) {
+  transform: rotate(-45deg);
+}
+
+header div.mobile-menu label.close-hamburger div.line:nth-of-type(2) {
+  opacity: 0;
+}
+
+header div.mobile-menu label.close-hamburger div.line:nth-of-type(3) {
+  transform: rotate(45deg);
+}
+
+header div.mobile-menu div.links {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 2rem;
+}
+
+header div.mobile-menu div.links a {
+  width: min-content;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+header div.mobile-menu div.links a:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import "header/header.scss";
+@import "header/hamburger.scss";
+@import "main/main.scss";
+@import "aside/aside.scss";
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+
+    * {
+        font-family: 'Inter', sans-serif;
+    }
+
+    @media screen and (min-width: 869px) {
+        padding: 4rem;
+    }
+}
+
+div.container {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 869px) {
+    
+    div.container {
+        gap: 1rem;
+        div.main {
+            
+            gap: 2rem;
+            
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 
+            "column1 column2";
+
+            div.column1 {
+                
+                grid-area: column1;
+                
+                div.preview {
+                    display: flex;
+                    
+                    div.preview-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end
+                    }
+                }
+            }
+
+            div.column2 {
+                
+                grid-area: column2;
+            }
+        
+        }
+
+        aside {
+            margin-top: 2rem;
+        }
+    }
+} 
+
+
+
